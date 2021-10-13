@@ -1,0 +1,192 @@
+/* * - universal selector */
+/* user agent stylesheet -> browser styling */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* border: 2px solid red; */
+    margin: 0px;
+    font-family: sans-serif;
+}
+.header-container{
+    /* border: 1px solid black; */
+    height: 5.2rem;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+}
+/* to give some common properties to its children classes */
+.header-container>*{
+    background-color: #454444;
+    height: 65%;
+    border-radius: 6px; 
+}
+.color-group_container{
+    /* background-color: rgb(96, 88, 88);
+    /* relative unit which derived it's value from parent */
+    /* height: 65%;  */
+    width: 40%; 
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border-radius: 6px; */
+}
+.add-cross_container, .lock-unlock_container{
+    width: 20%;
+    display: flex;
+    margin-right: 1rem;
+    /* justify-content: space-around;
+    align-items: center; */
+}
+.add-cross_container>*, .lock-unlock_container>*{
+    width: 50%;
+    height: 100%;
+    /* font-size: 2.5rem;
+      //boldness
+    font-weight: lighter; */
+}
+.plus-container,.multiply-container, .lock-container, .unlock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active{
+    background-color: rgb(62, 56, 56);
+}
+
+/* icons are treated as text */
+.tool_icons{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/* .fa-plus,.fa-times{
+    font-size: 2rem;
+    font-weight: 400;
+} */
+
+/* .task-input{
+    color: white;
+}  */
+
+.color{
+    height: 50%;
+    width: 12%;
+    border-radius: 4px;
+}
+.pink{
+    background-color: lightpink;
+}
+.blue{
+    background-color: lightblue;
+}
+.green{
+    background-color: lightgreen;
+}
+.black{
+    background-color: black;
+}
+.main-container{
+    /* border: 1px solid green; */
+    /* vh, vw */
+    /* 100% width of the visible screen -> 100vw */
+    /* 100% height of the visible screen -> 100vh */
+    height: calc(100vh - 5.2rem);
+    background-color: #f2f2f2;
+    padding: 4rem;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    overflow-y: scroll;
+}
+.task_container{
+    background-color: white;
+    height: 8rem;
+    width: 13rem;
+}
+.task_main-container{
+    padding: 0.5rem;
+    height: 6.5rem;
+}
+.task_header{
+    height: 0.5rem;
+    /* background-color: black; */
+}
+.task_id{
+    color: rgb(150, 144, 144);
+    margin: 0.2rem;
+    margin-left: 0px;
+}
+
+.text{
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.text::-webkit-scrollbar {
+    display: none;
+}
+
+.modal{
+    height:20rem;
+    width:35rem;
+    background-color: white;
+    /* put it fixed*/
+    position: fixed;
+    /* center vertically -  height is 20rem so remaining space is 50%-20/2*/
+    top:calc( 50% - 10rem);
+    /* center horizontally  -  width is 35rem so remaining space is 50%-35/2*/
+    left: calc( 50% - (35/2)rem);
+    display:flex;
+ }
+
+ .input_container{
+    width:65%;
+    /* border: 1px solid black; */
+    height:100%;
+    padding:2rem;
+    /* background-color: red; */
+ 
+ }
+ .input_container_text{
+    outline: none;
+    height:100%;
+    width:100%;
+    border:none;
+    font-size: 1.5rem;
+    /* font-weight: 100; */
+    font-family: sans-serif; 
+ }
+ .color_container{
+    background-color: #343131;
+    height:100%;
+    width:35%;
+ }
+ 
+ .color_container{
+    padding:  1.5rem;
+    /* text-align: center; */
+    display: flex;
+    /* flex direction -> flex for spacing */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .color_picker{
+    height:3rem;
+    width:6rem;
+ }
+ .selected{
+    border: 0.2rem solid white;
+ }
+ 
+ @media only screen and (max-width: 600px) {
+    html { font-size: 10px; } 
+}
