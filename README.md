@@ -8,6 +8,7 @@ The aim of this project was to create a web app for managing notes and prioritiz
 2. Delete the notes.
 3. Lock/Unlock the notes to enable editing the content of the notes.
 4. Filter the notes by color.
+5. Change the priority of notes later by clicking on the header of notes.
 
 ## Screenshot
 <p align="center">
